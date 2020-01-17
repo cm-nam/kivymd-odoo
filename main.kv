@@ -1,0 +1,27 @@
+#:include pages/login/login.kv
+#:include pages/inicio/inicio.kv
+
+MainNavigationLayout:
+    _panel_disable: True
+
+    MDNavigationDrawer:
+        drawer_logo: "menu.png"
+        NavigationDrawerIconButton:
+            icon: "home"
+            text: "Inicio"
+
+        NavigationDrawerIconButton:
+            icon: "lock"
+            text: "Pagina 2"
+
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            id: toolbar
+            title: "App"
+            md_bg_color: app.theme_cls.primary_color
+            left_action_items: []
+        ScreenManager:
+            id: screen_manager
+            PageLogin:
+            PageInicio:
